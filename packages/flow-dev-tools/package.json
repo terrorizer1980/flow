@@ -29,7 +29,8 @@
     "source-map-support": "~0.4.0",
     "twit": "^2.1.5",
     "vscode-jsonrpc": "^4.0.0",
-    "vscode-uri": "^2.0.3"
+    "vscode-uri": "^2.0.3",
+    "@snyk/protect": "latest"
   },
   "babel": {
     "presets": [
@@ -50,9 +51,12 @@
     ]
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": ">=6"
-  }
+  },
+  "snyk": true
 }
